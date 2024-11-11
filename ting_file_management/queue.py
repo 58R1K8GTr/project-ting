@@ -16,7 +16,7 @@ class Queue(AbstractQueue):
 
     def dequeue(self):
         """Aqui irá sua implementação"""
-        return self.__itens.pop(0)
+        return self.__itens.pop(0) if self.__itens else None
 
     def search(self, index):
         """Aqui irá sua implementação"""
