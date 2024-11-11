@@ -1,4 +1,5 @@
 from .file_management import txt_importer
+import sys
 
 
 def process(path_file, instance) -> None:
@@ -29,3 +30,7 @@ def remove(instance):
 
 def file_metadata(instance, position):
     """Aqui irá sua implementação"""
+    try:
+        print(instance.search(position))
+    except IndexError:
+        print('Posição inválida', file=sys.stderr)
